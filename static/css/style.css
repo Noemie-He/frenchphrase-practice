@@ -49,10 +49,11 @@ h1 {
 
 .dialogue-box {
     background: #f9f9f9;
-    border-left: 4px solid #333;
+    border: 1px solid #ddd;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 4px;
+    border-radius: 8px;
+    min-height: 150px;
 }
 
 .dialogue-box h3 {
@@ -61,11 +62,70 @@ h1 {
     font-size: 1.1em;
 }
 
-.dialogue-box pre {
-    font-family: inherit;
-    white-space: pre-wrap;
-    line-height: 1.8;
-    color: #555;
+.dialogue-line {
+    margin: 15px 0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dialogue-line.speaker-left {
+    background: #e8e8e8;
+    margin-right: 20%;
+    text-align: left;
+}
+
+.dialogue-line.speaker-right {
+    background: #333;
+    color: white;
+    margin-left: 20%;
+    text-align: right;
+}
+
+.dialogue-line .speaker {
+    font-weight: bold;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+.dialogue-line .text {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.dialogue-controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dialogue-controls button {
+    padding: 10px 25px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+}
+
+.dialogue-controls button:hover {
+    background: #555;
+}
+
+.dialogue-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 .scene-grid {

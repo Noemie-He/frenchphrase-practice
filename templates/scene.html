@@ -13,7 +13,12 @@
         
         <div class="dialogue-box">
             <h3>情境對話</h3>
-            <pre>{{ scene.dialogue }}</pre>
+            <div id="dialogue-container"></div>
+            <div class="dialogue-controls">
+                <button id="prevBtn" onclick="prevLine()" disabled>上一句</button>
+                <button id="nextBtn" onclick="nextLine()">下一句</button>
+                <button id="resetBtn" onclick="resetDialogue()">重新開始</button>
+            </div>
         </div>
         
         <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">常用短句</h3>
@@ -26,5 +31,56 @@
             {% endfor %}
         </div>
     </div>
+    
+    <script>
+        const dialogue = {{ scene.dialogue | tojson }};
+        let currentLine = -1;
+        
+        function showLine(index) {
+            if (index < 0 || index >= dialogue.length) return;
+            
+            const container = document.getElementById('dialogue-container');
+            const line = dialogue[index];
+            const isLeft = index % 2 === 0;
+            
+            const lineDiv = document.createElement('div');
+            lineDiv.className = `dialogue-line ${isLeft ? 'speaker-left' : 'speaker-right'}`;
+            lineDiv.innerHTML = `
+                <div class="speaker">${line.speaker}</div>
+                <div class="text">${line.text}</div>
+            `;
+            
+            container.appendChild(lineDiv);
+            updateButtons();
+        }
+        
+        function nextLine() {
+            if (currentLine < dialogue.length - 1) {
+                currentLine++;
+                showLine(currentLine);
+            }
+        }
+        
+        function prevLine() {
+            if (currentLine >= 0) {
+                const container = document.getElementById('dialogue-container');
+                container.removeChild(container.lastChild);
+                currentLine--;
+                updateButtons();
+            }
+        }
+        
+        function resetDialogue() {
+            const container = document.getElementById('dialogue-container');
+            container.innerHTML = '';
+            currentLine = -1;
+            updateButtons();
+        }
+        
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentLine < 0;
+            document.getElementById('nextBtn').disabled = currentLine >= dialogue.length - 1;
+        }
+    </script>
 </body>
 </html>
