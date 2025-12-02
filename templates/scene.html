@@ -21,14 +21,16 @@
             </div>
         </div>
         
-        <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">常用短句</h3>
-        <div class="phrase-list">
-            {% for phrase in scene.phrases %}
-            <a href="/phrase/{{ phrase.id }}" class="phrase-item">
-                <div class="phrase-french">{{ phrase.french }}</div>
-                <div class="phrase-chinese">{{ phrase.chinese }}</div>
-            </a>
-            {% endfor %}
+        <div id="phrases-section" style="display: none;">
+            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">常用短句</h3>
+            <div class="phrase-list">
+                {% for phrase in scene.phrases %}
+                <a href="/phrase/{{ phrase.id }}" class="phrase-item">
+                    <div class="phrase-french">{{ phrase.french }}</div>
+                    <div class="phrase-chinese">{{ phrase.chinese }}</div>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
     
@@ -52,6 +54,13 @@
             
             container.appendChild(lineDiv);
             updateButtons();
+            
+            // 對話完成後顯示短句區塊
+            if (index === dialogue.length - 1) {
+                setTimeout(() => {
+                    document.getElementById('phrases-section').style.display = 'block';
+                }, 500);
+            }
         }
         
         function nextLine() {
@@ -67,6 +76,11 @@
                 container.removeChild(container.lastChild);
                 currentLine--;
                 updateButtons();
+                
+                // 如果不是最後一句，隱藏短句區塊
+                if (currentLine < dialogue.length - 1) {
+                    document.getElementById('phrases-section').style.display = 'none';
+                }
             }
         }
         
@@ -74,6 +88,7 @@
             const container = document.getElementById('dialogue-container');
             container.innerHTML = '';
             currentLine = -1;
+            document.getElementById('phrases-section').style.display = 'none';
             updateButtons();
         }
         
