@@ -1,0 +1,48 @@
+{
+  "scenes": [
+    {
+      "id": "greeting",
+      "name": "打招呼",
+      "phrases": [
+        {"id": 1, "french": "Bonjour", "chinese": "你好", "pronunciation": "bong-zhoor"},
+        {"id": 2, "french": "Bonsoir", "chinese": "晚上好", "pronunciation": "bong-swar"},
+        {"id": 3, "french": "Comment allez-vous?", "chinese": "您好嗎？", "pronunciation": "ko-mahn ta-lay voo"},
+        {"id": 4, "french": "Ça va?", "chinese": "你好嗎？", "pronunciation": "sa va"},
+        {"id": 5, "french": "Enchanté", "chinese": "很高興認識你", "pronunciation": "ahn-shahn-tay"}
+      ]
+    },
+    {
+      "id": "restaurant",
+      "name": "餐廳",
+      "phrases": [
+        {"id": 6, "french": "L'addition, s'il vous plaît", "chinese": "請結帳", "pronunciation": "la-dee-syon seel voo play"},
+        {"id": 7, "french": "Je voudrais un café", "chinese": "我想要一杯咖啡", "pronunciation": "zhuh voo-dray uhn ka-fay"},
+        {"id": 8, "french": "C'est délicieux", "chinese": "很好吃", "pronunciation": "say day-lee-syuh"},
+        {"id": 9, "french": "Une table pour deux", "chinese": "兩人桌", "pronunciation": "ewn tahbl poor duh"},
+        {"id": 10, "french": "Le menu, s'il vous plaît", "chinese": "請給我菜單", "pronunciation": "luh muh-new seel voo play"}
+      ]
+    },
+    {
+      "id": "shopping",
+      "name": "購物",
+      "phrases": [
+        {"id": 11, "french": "Combien ça coûte?", "chinese": "這多少錢？", "pronunciation": "kom-byen sa koot"},
+        {"id": 12, "french": "C'est trop cher", "chinese": "太貴了", "pronunciation": "say tro share"},
+        {"id": 13, "french": "Je cherche...", "chinese": "我在找...", "pronunciation": "zhuh shairsh"},
+        {"id": 14, "french": "Quelle taille?", "chinese": "什麼尺寸？", "pronunciation": "kel tie"},
+        {"id": 15, "french": "Je peux essayer?", "chinese": "我可以試穿嗎？", "pronunciation": "zhuh puh eh-say-yay"}
+      ]
+    },
+    {
+      "id": "direction",
+      "name": "問路",
+      "phrases": [
+        {"id": 16, "french": "Où est...?", "chinese": "...在哪裡？", "pronunciation": "oo ay"},
+        {"id": 17, "french": "Je suis perdu", "chinese": "我迷路了", "pronunciation": "zhuh swee pair-dew"},
+        {"id": 18, "french": "À gauche", "chinese": "左邊", "pronunciation": "a gohsh"},
+        {"id": 19, "french": "À droite", "chinese": "右邊", "pronunciation": "a drwat"},
+        {"id": 20, "french": "Tout droit", "chinese": "直走", "pronunciation": "too drwa"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.scene-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.scene-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.scene-card:hover {
+    transform: translateY(-5px);
+}
+
+.scene-card h2 {
+    margin-bottom: 10px;
+}
+
+.phrase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.phrase-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 4px solid #667eea;
+}
+
+.phrase-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.phrase-french {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.phrase-chinese {
+    color: #666;
+}
+
+.phrase-card {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.phrase-french-large {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.phrase-pronunciation {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.phrase-chinese-large {
+    font-size: 1.5em;
+    opacity: 0.95;
+}
+
+.practice-section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}

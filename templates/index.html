@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>法語短句練習</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <h1>法語短句練習系統</h1>
-    <p>專案初始化成功！</p>
+    <div class="container">
+        <h1>法語短句練習系統</h1>
+        <p class="subtitle">選擇一個場景開始練習</p>
+        
+        <div class="scene-grid">
+            {% for scene in scenes %}
+            <a href="/scene/{{ scene.id }}" class="scene-card">
+                <h2>{{ scene.name }}</h2>
+                <p>{{ scene.phrases|length }} 個短句</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

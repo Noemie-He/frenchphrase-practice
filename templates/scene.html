@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ scene.name }} - 法語短句練習</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← 返回首頁</a>
+        <h1>{{ scene.name }}</h1>
+        
+        <div class="phrase-list">
+            {% for phrase in scene.phrases %}
+            <a href="/phrase/{{ phrase.id }}" class="phrase-item">
+                <div class="phrase-french">{{ phrase.french }}</div>
+                <div class="phrase-chinese">{{ phrase.chinese }}</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ phrase.french }} - 法語短句練習</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/scene/{{ scene.id }}" class="back-link">← 返回 {{ scene.name }}</a>
+        
+        <div class="phrase-card">
+            <h1 class="phrase-french-large">{{ phrase.french }}</h1>
+            <p class="phrase-pronunciation">[{{ phrase.pronunciation }}]</p>
+            <p class="phrase-chinese-large">{{ phrase.chinese }}</p>
+        </div>
+        
+        <div class="practice-section">
+            <button onclick="speakFrench()" class="btn-primary">🔊 發音</button>
+            <button onclick="toggleChinese()" class="btn-secondary">👁️ 顯示/隱藏中文</button>
+        </div>
+    </div>
+    
+    <script>
+        function speakFrench() {
+            const utterance = new SpeechSynthesisUtterance('{{ phrase.french }}');
+            utterance.lang = 'fr-FR';
+            speechSynthesis.speak(utterance);
+        }
+        
+        function toggleChinese() {
+            const chinese = document.querySelector('.phrase-chinese-large');
+            chinese.style.display = chinese.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
