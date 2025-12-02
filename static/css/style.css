@@ -6,18 +6,21 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f5f5f5;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     background: white;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -34,7 +37,7 @@ h1 {
 
 .back-link {
     display: inline-block;
-    color: #667eea;
+    color: #333;
     text-decoration: none;
     margin-bottom: 20px;
     font-weight: 500;
@@ -52,17 +55,17 @@ h1 {
 }
 
 .scene-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #333;
     color: white;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: transform 0.3s;
+    transition: background 0.3s;
     text-align: center;
 }
 
 .scene-card:hover {
-    transform: translateY(-5px);
+    background: #555;
 }
 
 .scene-card h2 {
@@ -76,17 +79,16 @@ h1 {
 }
 
 .phrase-item {
-    background: #f8f9fa;
+    background: #f5f5f5;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s;
-    border-left: 4px solid #667eea;
+    transition: background 0.3s;
+    border-left: 4px solid #333;
 }
 
 .phrase-item:hover {
-    background: #e9ecef;
-    transform: translateX(5px);
+    background: #e0e0e0;
 }
 
 .phrase-french {
@@ -103,9 +105,9 @@ h1 {
 .phrase-card {
     text-align: center;
     padding: 40px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #333;
     color: white;
-    border-radius: 15px;
+    border-radius: 8px;
     margin: 30px 0;
 }
 
@@ -116,13 +118,13 @@ h1 {
 
 .phrase-pronunciation {
     font-size: 1.2em;
-    opacity: 0.9;
+    color: #ccc;
     margin-bottom: 20px;
 }
 
 .phrase-chinese-large {
     font-size: 1.5em;
-    opacity: 0.95;
+    color: #e0e0e0;
 }
 
 .practice-section {
@@ -136,25 +138,25 @@ h1 {
     padding: 15px 30px;
     font-size: 1.1em;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s;
 }
 
 .btn-primary {
-    background: #667eea;
+    background: #333;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #5568d3;
+    background: #555;
 }
 
 .btn-secondary {
-    background: #6c757d;
+    background: #999;
     color: white;
 }
 
 .btn-secondary:hover {
-    background: #5a6268;
+    background: #777;
 }
