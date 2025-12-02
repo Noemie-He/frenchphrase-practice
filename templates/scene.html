@@ -11,6 +11,12 @@
         <a href="/" class="back-link">← 返回首頁</a>
         <h1>{{ scene.name }}</h1>
         
+        <div class="dialogue-box">
+            <h3>情境對話</h3>
+            <pre>{{ scene.dialogue }}</pre>
+        </div>
+        
+        <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">常用短句</h3>
         <div class="phrase-list">
             {% for phrase in scene.phrases %}
             <a href="/phrase/{{ phrase.id }}" class="phrase-item">

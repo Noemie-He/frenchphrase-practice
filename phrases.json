@@ -3,45 +3,96 @@
     {
       "id": "greeting",
       "name": "打招呼",
+      "dialogue": "A: Bonjour! Comment allez-vous?\nB: Ça va bien, merci. Et vous?\nA: Très bien, merci. Enchanté de vous rencontrer.\nB: Moi aussi. Bonne journée!\nA: À bientôt!",
       "phrases": [
-        {"id": 1, "french": "Bonjour", "chinese": "你好", "pronunciation": "bong-zhoor"},
+        {"id": 1, "french": "Bonjour", "chinese": "你好（白天）", "pronunciation": "bong-zhoor"},
         {"id": 2, "french": "Bonsoir", "chinese": "晚上好", "pronunciation": "bong-swar"},
-        {"id": 3, "french": "Comment allez-vous?", "chinese": "您好嗎？", "pronunciation": "ko-mahn ta-lay voo"},
-        {"id": 4, "french": "Ça va?", "chinese": "你好嗎？", "pronunciation": "sa va"},
-        {"id": 5, "french": "Enchanté", "chinese": "很高興認識你", "pronunciation": "ahn-shahn-tay"}
+        {"id": 3, "french": "Salut", "chinese": "嗨（非正式）", "pronunciation": "sa-lew"},
+        {"id": 4, "french": "Comment allez-vous?", "chinese": "您好嗎？（正式）", "pronunciation": "ko-mahn ta-lay voo"},
+        {"id": 5, "french": "Ça va?", "chinese": "你好嗎？（非正式）", "pronunciation": "sa va"},
+        {"id": 6, "french": "Ça va bien", "chinese": "我很好", "pronunciation": "sa va byen"},
+        {"id": 7, "french": "Et vous?", "chinese": "你呢？", "pronunciation": "ay voo"},
+        {"id": 8, "french": "Enchanté", "chinese": "很高興認識你", "pronunciation": "ahn-shahn-tay"},
+        {"id": 9, "french": "Bonne journée", "chinese": "祝你有美好的一天", "pronunciation": "bon zhoor-nay"},
+        {"id": 10, "french": "À bientôt", "chinese": "待會見", "pronunciation": "a byen-toh"},
+        {"id": 11, "french": "À demain", "chinese": "明天見", "pronunciation": "a duh-man"},
+        {"id": 12, "french": "Bonne soirée", "chinese": "祝你有個美好的夜晚", "pronunciation": "bon swa-ray"}
       ]
     },
     {
       "id": "restaurant",
       "name": "餐廳",
+      "dialogue": "Serveur: Bonjour, une table pour combien de personnes?\nClient: Pour deux, s'il vous plaît.\nServeur: Suivez-moi. Voici le menu.\nClient: Merci. Je voudrais un steak-frites et un verre de vin rouge.\nServeur: Très bien. Et comme dessert?\nClient: Une crème brûlée, s'il vous plaît.\nServeur: Parfait!\n(Plus tard)\nClient: L'addition, s'il vous plaît.\nServeur: Voilà. Bonne soirée!",
       "phrases": [
-        {"id": 6, "french": "L'addition, s'il vous plaît", "chinese": "請結帳", "pronunciation": "la-dee-syon seel voo play"},
-        {"id": 7, "french": "Je voudrais un café", "chinese": "我想要一杯咖啡", "pronunciation": "zhuh voo-dray uhn ka-fay"},
-        {"id": 8, "french": "C'est délicieux", "chinese": "很好吃", "pronunciation": "say day-lee-syuh"},
-        {"id": 9, "french": "Une table pour deux", "chinese": "兩人桌", "pronunciation": "ewn tahbl poor duh"},
-        {"id": 10, "french": "Le menu, s'il vous plaît", "chinese": "請給我菜單", "pronunciation": "luh muh-new seel voo play"}
+        {"id": 13, "french": "Une table pour deux", "chinese": "兩人桌", "pronunciation": "ewn tahbl poor duh"},
+        {"id": 14, "french": "Le menu, s'il vous plaît", "chinese": "請給我菜單", "pronunciation": "luh muh-new seel voo play"},
+        {"id": 15, "french": "Je voudrais...", "chinese": "我想要...", "pronunciation": "zhuh voo-dray"},
+        {"id": 16, "french": "Un verre d'eau", "chinese": "一杯水", "pronunciation": "uhn vair doh"},
+        {"id": 17, "french": "Un café", "chinese": "一杯咖啡", "pronunciation": "uhn ka-fay"},
+        {"id": 18, "french": "Du pain", "chinese": "麵包", "pronunciation": "dew pan"},
+        {"id": 19, "french": "C'est délicieux", "chinese": "很好吃", "pronunciation": "say day-lee-syuh"},
+        {"id": 20, "french": "L'addition, s'il vous plaît", "chinese": "請結帳", "pronunciation": "la-dee-syon seel voo play"},
+        {"id": 21, "french": "Combien je vous dois?", "chinese": "我要付多少錢？", "pronunciation": "kom-byen zhuh voo dwa"},
+        {"id": 22, "french": "C'est compris?", "chinese": "包含服務費嗎？", "pronunciation": "say kom-pree"},
+        {"id": 23, "french": "Bon appétit", "chinese": "祝你好胃口", "pronunciation": "bon na-pay-tee"},
+        {"id": 24, "french": "Santé!", "chinese": "乾杯！", "pronunciation": "sahn-tay"}
       ]
     },
     {
       "id": "shopping",
       "name": "購物",
+      "dialogue": "Vendeur: Bonjour, je peux vous aider?\nClient: Oui, je cherche un pull.\nVendeur: Quelle taille faites-vous?\nClient: Du M. Je peux l'essayer?\nVendeur: Bien sûr, les cabines sont là-bas.\n(Après essayage)\nClient: Ça me va bien. Combien ça coûte?\nVendeur: 45 euros.\nClient: D'accord, je le prends. Vous acceptez la carte?\nVendeur: Oui, bien sûr.",
       "phrases": [
-        {"id": 11, "french": "Combien ça coûte?", "chinese": "這多少錢？", "pronunciation": "kom-byen sa koot"},
-        {"id": 12, "french": "C'est trop cher", "chinese": "太貴了", "pronunciation": "say tro share"},
-        {"id": 13, "french": "Je cherche...", "chinese": "我在找...", "pronunciation": "zhuh shairsh"},
-        {"id": 14, "french": "Quelle taille?", "chinese": "什麼尺寸？", "pronunciation": "kel tie"},
-        {"id": 15, "french": "Je peux essayer?", "chinese": "我可以試穿嗎？", "pronunciation": "zhuh puh eh-say-yay"}
+        {"id": 25, "french": "Je peux vous aider?", "chinese": "我可以幫您嗎？", "pronunciation": "zhuh puh vooz ay-day"},
+        {"id": 26, "french": "Je cherche...", "chinese": "我在找...", "pronunciation": "zhuh shairsh"},
+        {"id": 27, "french": "Combien ça coûte?", "chinese": "這多少錢？", "pronunciation": "kom-byen sa koot"},
+        {"id": 28, "french": "C'est trop cher", "chinese": "太貴了", "pronunciation": "say tro share"},
+        {"id": 29, "french": "Quelle taille?", "chinese": "什麼尺寸？", "pronunciation": "kel tie"},
+        {"id": 30, "french": "Je peux essayer?", "chinese": "我可以試穿嗎？", "pronunciation": "zhuh puh eh-say-yay"},
+        {"id": 31, "french": "Ça me va bien", "chinese": "這很適合我", "pronunciation": "sa muh va byen"},
+        {"id": 32, "french": "Je le prends", "chinese": "我買這個", "pronunciation": "zhuh luh prahn"},
+        {"id": 33, "french": "Vous acceptez la carte?", "chinese": "你們收信用卡嗎？", "pronunciation": "vooz ak-sep-tay la kart"},
+        {"id": 34, "french": "Un sac, s'il vous plaît", "chinese": "請給我一個袋子", "pronunciation": "uhn sak seel voo play"},
+        {"id": 35, "french": "C'est en solde?", "chinese": "這在打折嗎？", "pronunciation": "say tahn sold"},
+        {"id": 36, "french": "Avez-vous d'autres couleurs?", "chinese": "有其他顏色嗎？", "pronunciation": "a-vay voo dotr koo-luhr"}
       ]
     },
     {
       "id": "direction",
       "name": "問路",
+      "dialogue": "Touriste: Excusez-moi, où est la gare?\nPassant: C'est tout droit, puis tournez à gauche.\nTouriste: C'est loin d'ici?\nPassant: Non, c'est à cinq minutes à pied.\nTouriste: Merci beaucoup!\nPassant: De rien, bonne journée!",
       "phrases": [
-        {"id": 16, "french": "Où est...?", "chinese": "...在哪裡？", "pronunciation": "oo ay"},
-        {"id": 17, "french": "Je suis perdu", "chinese": "我迷路了", "pronunciation": "zhuh swee pair-dew"},
-        {"id": 18, "french": "À gauche", "chinese": "左邊", "pronunciation": "a gohsh"},
-        {"id": 19, "french": "À droite", "chinese": "右邊", "pronunciation": "a drwat"},
-        {"id": 20, "french": "Tout droit", "chinese": "直走", "pronunciation": "too drwa"}
+        {"id": 37, "french": "Excusez-moi", "chinese": "不好意思", "pronunciation": "eks-kew-zay mwa"},
+        {"id": 38, "french": "Où est...?", "chinese": "...在哪裡？", "pronunciation": "oo ay"},
+        {"id": 39, "french": "Je suis perdu", "chinese": "我迷路了", "pronunciation": "zhuh swee pair-dew"},
+        {"id": 40, "french": "À gauche", "chinese": "左邊", "pronunciation": "a gohsh"},
+        {"id": 41, "french": "À droite", "chinese": "右邊", "pronunciation": "a drwat"},
+        {"id": 42, "french": "Tout droit", "chinese": "直走", "pronunciation": "too drwa"},
+        {"id": 43, "french": "Tournez à gauche", "chinese": "左轉", "pronunciation": "toor-nay a gohsh"},
+        {"id": 44, "french": "C'est loin?", "chinese": "遠嗎？", "pronunciation": "say lwan"},
+        {"id": 45, "french": "C'est près d'ici", "chinese": "離這裡很近", "pronunciation": "say pray dee-see"},
+        {"id": 46, "french": "À pied", "chinese": "步行", "pronunciation": "a pyay"},
+        {"id": 47, "french": "En métro", "chinese": "搭地鐵", "pronunciation": "ahn may-tro"},
+        {"id": 48, "french": "La gare", "chinese": "火車站", "pronunciation": "la gar"}
+      ]
+    },
+    {
+      "id": "hotel",
+      "name": "飯店",
+      "dialogue": "Réceptionniste: Bonjour, bienvenue!\nClient: Bonjour, j'ai une réservation au nom de Martin.\nRéceptionniste: Un instant... Oui, une chambre double pour trois nuits.\nClient: C'est ça. Le petit-déjeuner est inclus?\nRéceptionniste: Oui, de 7h à 10h. Voici votre clé, chambre 305.\nClient: Merci. À quelle heure est le check-out?\nRéceptionniste: À midi. Bon séjour!",
+      "phrases": [
+        {"id": 49, "french": "J'ai une réservation", "chinese": "我有預訂", "pronunciation": "zhay ewn ray-zair-va-syon"},
+        {"id": 50, "french": "Une chambre simple", "chinese": "單人房", "pronunciation": "ewn shahm-br sampl"},
+        {"id": 51, "french": "Une chambre double", "chinese": "雙人房", "pronunciation": "ewn shahm-br doobl"},
+        {"id": 52, "french": "Pour combien de nuits?", "chinese": "住幾晚？", "pronunciation": "poor kom-byen duh nwee"},
+        {"id": 53, "french": "Le petit-déjeuner est inclus?", "chinese": "包含早餐嗎？", "pronunciation": "luh puh-tee day-zhuh-nay ay tan-klew"},
+        {"id": 54, "french": "Avez-vous le wifi?", "chinese": "有 WiFi 嗎？", "pronunciation": "a-vay voo luh wee-fee"},
+        {"id": 55, "french": "Le mot de passe", "chinese": "密碼", "pronunciation": "luh mo duh pas"},
+        {"id": 56, "french": "À quelle heure?", "chinese": "幾點？", "pronunciation": "a kel uhr"},
+        {"id": 57, "french": "La clé", "chinese": "鑰匙", "pronunciation": "la klay"},
+        {"id": 58, "french": "Bon séjour", "chinese": "祝您住宿愉快", "pronunciation": "bon say-zhoor"},
+        {"id": 59, "french": "Je voudrais une serviette", "chinese": "我想要一條毛巾", "pronunciation": "zhuh voo-dray ewn sair-vyet"},
+        {"id": 60, "french": "La climatisation ne marche pas", "chinese": "空調壞了", "pronunciation": "la klee-ma-tee-za-syon nuh marsh pa"}
       ]
     }
   ]

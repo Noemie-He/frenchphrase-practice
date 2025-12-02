@@ -47,6 +47,27 @@ h1 {
     text-decoration: underline;
 }
 
+.dialogue-box {
+    background: #f9f9f9;
+    border-left: 4px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.dialogue-box h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.dialogue-box pre {
+    font-family: inherit;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    color: #555;
+}
+
 .scene-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
