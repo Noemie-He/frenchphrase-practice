@@ -128,6 +128,56 @@ h1 {
     cursor: not-allowed;
 }
 
+.grammar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grammar-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #666;
+}
+
+.grammar-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.grammar-explanation {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.grammar-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.example {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.example-french {
+    color: #333;
+    font-weight: 600;
+}
+
+.example-chinese {
+    color: #666;
+    font-size: 0.95em;
+}
+
 .scene-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

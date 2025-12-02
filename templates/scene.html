@@ -21,6 +21,26 @@
             </div>
         </div>
         
+        <div id="grammar-section" style="display: none;">
+            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">文法重點 (A1-A2)</h3>
+            <div class="grammar-list">
+                {% for grammar in scene.grammar %}
+                <div class="grammar-item">
+                    <h4>{{ grammar.title }}</h4>
+                    <p class="grammar-explanation">{{ grammar.explanation }}</p>
+                    <div class="grammar-examples">
+                        {% for example in grammar.examples %}
+                        <div class="example">
+                            <span class="example-french">{{ example.french }}</span>
+                            <span class="example-chinese">{{ example.chinese }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
         <div id="phrases-section" style="display: none;">
             <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">常用短句</h3>
             <div class="phrase-list">
@@ -37,16 +57,25 @@
     <script>
         const dialogue = {{ scene.dialogue | tojson }};
         let currentLine = -1;
+        const speakerPositions = {};
+        let nextPosition = 'left';
         
         function showLine(index) {
             if (index < 0 || index >= dialogue.length) return;
             
             const container = document.getElementById('dialogue-container');
             const line = dialogue[index];
-            const isLeft = index % 2 === 0;
+            
+            // 為每個說話者固定位置
+            if (!speakerPositions[line.speaker]) {
+                speakerPositions[line.speaker] = nextPosition;
+                nextPosition = nextPosition === 'left' ? 'right' : 'left';
+            }
+            
+            const position = speakerPositions[line.speaker];
             
             const lineDiv = document.createElement('div');
-            lineDiv.className = `dialogue-line ${isLeft ? 'speaker-left' : 'speaker-right'}`;
+            lineDiv.className = `dialogue-line speaker-${position}`;
             lineDiv.innerHTML = `
                 <div class="speaker">${line.speaker}</div>
                 <div class="text">${line.text}</div>
@@ -55,9 +84,10 @@
             container.appendChild(lineDiv);
             updateButtons();
             
-            // 對話完成後顯示短句區塊
+            // 對話完成後顯示文法和短句區塊
             if (index === dialogue.length - 1) {
                 setTimeout(() => {
+                    document.getElementById('grammar-section').style.display = 'block';
                     document.getElementById('phrases-section').style.display = 'block';
                 }, 500);
             }
@@ -77,8 +107,9 @@
                 currentLine--;
                 updateButtons();
                 
-                // 如果不是最後一句，隱藏短句區塊
+                // 如果不是最後一句，隱藏文法和短句區塊
                 if (currentLine < dialogue.length - 1) {
+                    document.getElementById('grammar-section').style.display = 'none';
                     document.getElementById('phrases-section').style.display = 'none';
                 }
             }
@@ -88,6 +119,12 @@
             const container = document.getElementById('dialogue-container');
             container.innerHTML = '';
             currentLine = -1;
+            // 重置說話者位置
+            for (let key in speakerPositions) {
+                delete speakerPositions[key];
+            }
+            nextPosition = 'left';
+            document.getElementById('grammar-section').style.display = 'none';
             document.getElementById('phrases-section').style.display = 'none';
             updateButtons();
         }
